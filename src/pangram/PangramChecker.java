@@ -7,7 +7,7 @@ public class PangramChecker {
 
         for (char currentChar : input.toLowerCase().toCharArray()) {
             if (Character.isLetter(currentChar)) {
-                alphabetPresent[currentChar - 'a'] = true;
+                alphabetPresent[currentChar - 'a'] = true; // index
             }
         }
 
