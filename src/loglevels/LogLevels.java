@@ -8,6 +8,8 @@ public class LogLevels {
 
     static String part2;
 
+    static String part3;
+
     public static String message(String logLine) {
         parts = logLine.split(":");
         if (parts.length == 2) {
