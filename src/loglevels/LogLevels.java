@@ -35,7 +35,7 @@ public class LogLevels {
             part1 = parts[0].toLowerCase().trim().replace("[", "(").replace("]", ")");
             part2 = parts[1].trim(); // Get the second part
         }
-        String cleanedPart2 = part2.replaceAll("(?<!\\\\)\\\\t|(?<!\\\\)\\\\r|(?<!\\\\)\\\\n", "");
+        String cleanedPart2 = part2.replaceAll("\\p{Cntrl}", "");
 
         return  cleanedPart2 + " " + part1 ;
     }
