@@ -3,25 +3,56 @@ package loops;
 public class PyramidExc {
     public static void main(String[] args) {
         int rows = 5;
+        //1
+        for (int i = 5; i >= 0; i--) { // 5 4 3 2 1
+            System.out.println(" ");
+            for (int j = 0; j < i; j++) {
+                System.out.print(". ");
+            }
+            System.out.println();
+        }
 
-        for (int i = 1; i <= rows; i++) { // 1, 2, 3, 4, 5
-            for (int j = 1; j <= i - rows; j--) { // i - 5 = - 4 -> space 4 3 2 1 0
+
+        //2
+        for (int i = 0; i <= rows; i++) { // 1 2 3 4 5
+            System.out.println(" ");
+            for (int j = 0; j < i; j++) {
+                System.out.print(". ");
+            }
+            for (int l = i; l < rows - i + 6; l++) { // second space
                 System.out.print("  ");
             }
 
-            for (int k = 1; k <= i; k++) { // i = 1, k = 1
-                System.out.print(".");
+            for (int k = 0; k < i; k++) { // .
+                System.out.print(". ");
             }
-
-            for (int l = i ; l <= rows - i + 5; l++) { // space from the first .
-                System.out.print(" ");
-            }
-
-            for (int m = 1; m <= i; m++) { //1
-                System.out.print(".");
-            }
-
             System.out.println();
         }
+
+        //3
+        for (int i = 0; i < rows; i++) {
+            System.out.println(" ");
+
+            for (int j = 0; j < rows - i + 8; j++) {
+                System.out.print("  ");
+            }
+
+            for (int k = 0; k <= i; k++) {
+                System.out.print(". ");
+            }
+
+            System.out.println("  ");
+
+
+        }
+
+
     }
 }
+
+
+
+
+
+
+
