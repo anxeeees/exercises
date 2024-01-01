@@ -14,12 +14,13 @@ public class PyramidExc {
 
 
         //2
-        for (int i = 0; i <= rows; i++) { // 1 2 3 4 5
+        for (int i = 0; i <= rows; i++) { // 0// 1 2 3 4 5
             System.out.println(" ");
-            for (int j = 0; j < i; j++) {
+            for (int j = 0; j < i; j++) { // filling . j < i , 0 1 2 3 4
                 System.out.print(". ");
             }
-            for (int l = i; l < rows - i + 6; l++) { // second space
+
+            for (int l = i; l < rows - i + 7; l++) { // space, l = 4, space = 4
                 System.out.print("  ");
             }
 
@@ -33,7 +34,7 @@ public class PyramidExc {
         for (int i = 0; i < rows; i++) {
             System.out.println(" ");
 
-            for (int j = 0; j < rows - i + 8; j++) {
+            for (int j = 0; j < rows - i + 6; j++) { // space on each row
                 System.out.print("  ");
             }
 
