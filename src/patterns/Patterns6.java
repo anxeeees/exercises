@@ -44,6 +44,21 @@ public class Patterns6 {
             }
             System.out.println();
         }
+        System.out.println();
+        // 4
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 5; j >= i; j--) {
+                System.out.print(" ");
+            }
+            for (int k = 9; k > i * 2; k--) {
+                if (k < 9 && k > i * 2 - 1) {
+                    System.out.print(" ");
+                } else {
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
+        }
     }
 }
 
