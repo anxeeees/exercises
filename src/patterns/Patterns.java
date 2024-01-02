@@ -1,6 +1,6 @@
 package patterns;
 
-public class Pyr {
+public class Patterns {
     public static void main(String[] args) {
         //1 right half pyramid
         int rows = 5;
