@@ -27,12 +27,16 @@ public class Array1 {
 
         // FindMax method with indexes
         System.out.println("Max number:");
-        findMax(arr, 1,2);
+        findMax(arr, 1, 2);
         System.out.println("StartIndex: 1 \nEndIndex: 2 ");
 
         // FindMax method without indexes
         System.out.println("Find maximum number in the whole array:");
         findMax(arr);
+
+        //Reverse array
+        System.out.println("Reverse array:");
+        reverse(arr);
 
 
     }
@@ -73,6 +77,20 @@ public class Array1 {
             }
         }
         System.out.println(max);
+    }
+
+    static void reverse(int arr[]) {
+        int start = 0;
+        int end = arr.length - 1;
+
+            while (start < end) {
+                swap(arr, end, start);
+                start++;
+                end--;
+            }
+
+
+        System.out.println(Arrays.toString(arr));
     }
 
 }
