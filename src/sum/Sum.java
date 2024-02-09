@@ -9,9 +9,13 @@ public class Sum {
         int x;
         int sum = 0;
 
-        for(x = 0; x < 6; x++) {
+        for (x = 0; x < 6; x++) {
             sum += x;
         }
         System.out.println(sum);
+
+
     }
+
+
 }
