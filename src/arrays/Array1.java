@@ -79,17 +79,16 @@ public class Array1 {
         System.out.println(max);
     }
 
+    // Reverse method
     static void reverse(int arr[]) {
         int start = 0;
         int end = arr.length - 1;
 
-            while (start < end) {
-                swap(arr, end, start);
-                start++;
-                end--;
-            }
-
-
+        while (start < end) {
+            swap(arr, end, start);
+            start++;
+            end--;
+        }
         System.out.println(Arrays.toString(arr));
     }
 
