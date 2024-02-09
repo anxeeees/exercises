@@ -22,8 +22,18 @@ public class Array1 {
         System.out.println(Arrays.toString(arr));
 
         // Swap numbers in this array
-        swap(arr, 1,3);
-        System.out.println(Arrays.toString(arr));
+        swap(arr, 1, 3);
+        System.out.println("This is the swapped number: \n" + Arrays.toString(arr));
+
+        // FindMax method with indexes
+        System.out.println("Max number:");
+        findMax(arr, 1,2);
+        System.out.println("StartIndex: 1 \nEndIndex: 2 ");
+
+        // FindMax method without indexes
+        System.out.println("Find maximum number in the whole array:");
+        findMax(arr);
+
 
     }
 
@@ -31,7 +41,38 @@ public class Array1 {
     static void swap(int arr[], int number1, int number2) {
         int temp;
         temp = arr[number1]; // 1
-        arr[number1] = arr [number2]; //2
+        arr[number1] = arr[number2]; //2
         arr[number2] = temp; // 1
     }
+
+    // Find max method
+
+    static void findMax(int arr[], int startIndex, int endIndex) {
+        //arr[i] = 1 2 3 4 5
+        int max = arr[startIndex]; // Imagine that first index is the maximum of all
+
+        for (int i = startIndex; i < endIndex; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        System.out.println(max);
+    }
+
+    static void findMax(int arr[]) {
+        //arr[i] = 1 2 3 4 5
+        int startIndex = 0;
+        int endIndex = arr.length - 1;
+
+        int max = arr[startIndex]; // Imagine that first index is the maximum of all
+
+
+        for (int i = startIndex; i <= endIndex; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        System.out.println(max);
+    }
+
 }
