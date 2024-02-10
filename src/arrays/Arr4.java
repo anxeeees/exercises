@@ -28,6 +28,11 @@ public class Arr4 {
         int[] array2 = {25, 14, 18, 15, 36, 56, 77, 18, 29, 50};
         findMin(array2);
 
+        // 12. Write a Java program to find duplicate values in an array of integer values.
+        int[] arr2 = {25, 2, 18, 1, 0};
+        System.out.println(Arrays.toString(arr2));
+        System.out.println(findDuplicate(arr2));
+
     }
 
     // Remove method
@@ -64,5 +69,19 @@ public class Arr4 {
         }
         System.out.println(min);
     }
+
+    static boolean findDuplicate(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                if (arr[i] == arr[j] && i != j) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+
 }
+
 
