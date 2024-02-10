@@ -20,6 +20,9 @@ public class Arr4 {
         }
         System.out.println(Arrays.toString(new_array));
 
+        //9. Write a Java program to insert an element (specific position) into an array.
+        int[] arr = {25, 14, 56, 15, 36, 0, 0, 0};
+        add(arr, 2, 35);
 
     }
 
@@ -30,6 +33,15 @@ public class Arr4 {
             arr[i] = arr[i + 1];
         }
         arr[i] = 0;
+        System.out.println(Arrays.toString(arr));
+    }
+
+    static void add(int arr[], int index, int value) {
+        int i;
+        for (i = arr.length - 1; i > index; i--) {
+            arr[i] = arr[i - 1];
+        }
+        arr[index] = value;
         System.out.println(Arrays.toString(arr));
     }
 }
