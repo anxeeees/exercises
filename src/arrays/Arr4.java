@@ -24,6 +24,10 @@ public class Arr4 {
         int[] arr = {25, 14, 56, 15, 36, 0, 0, 0};
         add(arr, 2, 35);
 
+        // 10. Write a Java program to find the  minimum value of an array.
+        int[] array2 = {25, 14, 18, 15, 36, 56, 77, 18, 29, 50};
+        findMin(array2);
+
     }
 
     // Remove method
@@ -43,6 +47,22 @@ public class Arr4 {
         }
         arr[index] = value;
         System.out.println(Arrays.toString(arr));
+    }
+
+    static void findMin(int arr[]) {
+        //arr[i] = 1 2 3 4 5
+        int startIndex = 0;
+        int endIndex = arr.length - 1;
+
+        int min = arr[startIndex]; // Imagine that first index is the maximum of all
+
+
+        for (int i = startIndex; i <= endIndex; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+        System.out.println(min);
     }
 }
 
