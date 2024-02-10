@@ -29,9 +29,12 @@ public class Arr4 {
         findMin(array2);
 
         // 12. Write a Java program to find duplicate values in an array of integer values.
-        int[] arr2 = {25, 2, 18, 1, 0};
+        int[] arr2 = {25, 18, 18, 1, 1, 20, 20, 100, 100};
         System.out.println(Arrays.toString(arr2));
         System.out.println(findDuplicate(arr2));
+
+        // 16. Write a Java program to remove duplicate elements from an array.
+        removeDuplicate(arr2);
 
     }
 
@@ -42,7 +45,6 @@ public class Arr4 {
             arr[i] = arr[i + 1];
         }
         arr[i] = 0;
-        System.out.println(Arrays.toString(arr));
     }
 
     static void add(int arr[], int index, int value) {
@@ -79,6 +81,18 @@ public class Arr4 {
             }
         }
         return false;
+    }
+
+    static void removeDuplicate(int arr[]) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = 0; j < arr.length; j++) {
+                if (arr[i] == arr[j] && i != j) {
+                    remove(arr, j);
+                }
+            }
+
+        }
+        System.out.println(Arrays.toString(arr));
     }
 
 
